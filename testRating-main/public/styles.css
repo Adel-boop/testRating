@@ -1,0 +1,75 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fffe;
+    height: 100vh;
+    font-family:'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.app{
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 1px 2px 16px  rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    border-radius: 8px;
+}
+
+.app__buttons{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.app__button{
+    cursor: pointer;
+    border: solid 2px transparent;
+    transition: border-color ease 0.3s;
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: #36cf5a;
+    padding: 8px 12px;
+    color: white;
+}
+
+.app__button:hover:not(.active){
+    background-color: #29a643;
+}
+
+.app__button.active{
+    border: solid 2px #0d3316;
+}
+
+.app__quality, .app__visual, .app__ergonomic{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.app__param{
+    display: flex;
+    justify-content: space-between;
+}
+
+.app__progress{
+    transition: width ease-in-out 0.3s;
+    width: 0;
+    height: 4px;
+    background-color: red;
+    border-radius: 12px;
+}
+
+.app__quality .app__progress{
+    background-color: #11dddd;
+}
+
+.app__visual .app__progress{
+    background-color: #3c0bec;
+}
+
+.app__ergonomic .app__progress{
+    background-color: #ec0bac;
+}
